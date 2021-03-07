@@ -2,41 +2,53 @@
 # Dracula Theme for Mutt: https://draculatheme.com/
 #
 # @author Paul Townsend <paul@caprica.org>
+# @author Igor Absorto
 
-# general ------------ foreground ---- background -----------------------------
-color error		color231	color212
-color indicator		color231	color241
-color markers		color210	default
-color message		default		default
-color normal		default		default
-color prompt		default	        default
-color search		color84		default
-color status 		color141	color236
-color tilde		color231	default
-color tree		color141	default
+set my_purple      = "color141"
+set my_blue        = "color117"
+set my_orange      = "color215"
+set my_white       = "color231"
+set my_darkpurple  = "color061"
+set my_pink        = "color210"
+set my_lightpink   = "color212"
+set my_grey        = "color241"
+set my_darkgrey    = "color236"
+set my_green       = "color084"
+set my_yellow      = "color228"
 
-# message index ------ foreground ---- background -----------------------------
-color index		color210	default 	~D # deleted messages
-color index		color84		default 	~F # flagged messages
-color index		color117	default 	~N # new messages
-color index		color212	default 	~Q # messages which have been replied to
-color index		color215	default 	~T # tagged messages
-color index		color141	default		~v # messages part of a collapsed thread
+# general ---------foreground--background -----------------------------
+color error         $my_white	        $my_lightpink
+color indicator		$my_pink	        $my_grey
+color markers		$my_pink	        default
+color message		default		        default
+color normal		default		        default
+color prompt		default             default
+color search		$my_green		    default
+color status 		$my_purple	        $my_darkgrey
+color tilde		    $my_white	        default
+color tree		    $my_purple	        default
+#
+## message index foreground ---- background -----------------------------
+color index		    $my_pink    	    default 	~D # deleted messages
+color index		    $my_green		    default 	~F # flagged messages
+color index		    $my_blue	        default 	~N # new messages
+color index		    $my_grey    	    default 	~Q # messages which have been replied to
+color index		    $my_orange	        default 	~T # tagged messages
 
-# message headers ---- foreground ---- background -----------------------------
-color hdrdefault	color117	default
-color header		color231	default		^Subject:.*
+## message headers ---- foreground ---- background -----------------------------
+color hdrdefault    $my_blue	default
+color header	    $my_white	default		^Subject:.*
 
-# message body ------- foreground ---- background -----------------------------
-color attachment	color228	default
-color body		color231	default		[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+               # email addresses
-color body		color228	default		(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+        # URLs
-color body		color231	default		(^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$) # *bold* text
-color body		color231	default		(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)     # _underlined_ text
-color body		color231	default		(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)     # /italic/ text
-color quoted		color61		default
-color quoted1		color117	default
-color quoted2		color84		default
-color quoted3		color215	default
-color quoted4		color212	default
-color signature		color212	default
+## message body ------- foreground ---- background -----------------------------
+color attachment	$my_yellow	        default
+color body		    $my_white	        default		[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+               # email addresses
+color body		    $my_yellow	        default		(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+        # URLs
+color body		    $my_white	        default		(^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$) # *bold* text
+color body		    $my_white	        default		(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)     # _underlined_ text
+color body		    $my_white	        default		(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)     # /italic/ text
+color quoted		$my_darkpurple		default
+color quoted1		$my_blue	        default
+color quoted2		$my_green		    default
+color quoted3		$my_orange	        default
+color quoted4		$my_lightpink	    default
+color signature	    $my_lightpink	    default
